@@ -9,7 +9,6 @@ let weather = {
                 // q -> 城市名稱、州代碼和國家代碼
                 // appid -> unique API key
                 // units -> 測量單位，默認 standard 標準、metric 公制、imperial 英制
-
         )
         .then((response) => response.json())
         .then((data) => this.displayWeather(data))
