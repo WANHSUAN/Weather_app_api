@@ -38,7 +38,6 @@ let weather = {
         //      }
         //    ]  
         //  }
-
         const { name } = data;
         const { icon, description } = data.weather[0];
         const { temp, humidity } = data.main;
@@ -52,8 +51,6 @@ let weather = {
         document.querySelector('.wind').innerText = '風速： ' + speed + 'km/h';
         document.body.style.backgroundImage = 
             'url("https://source.unsplash.com/1600x900/?city ' + name + '")';
-        document.body.style.backgroundRepeat = 'none';
-        document.body.style.backgroundSize = '100';
         document.body.style.width = '100%';
         document.body.style.height = '100%';
         document.body.style.backgroundRepeat = 'no-repeat';
@@ -64,7 +61,9 @@ let weather = {
     },
 };
 
-document.querySelector('.search button').addEventListener('click', function() {
+document
+    .querySelector('.search button')
+    .addEventListener('click', function() {
     weather.search();
 });
 
@@ -74,6 +73,6 @@ document
         if(event.key == 'Enter') {
             weather.search();
         }
-    });
+});
 
 weather.fetchWeather('Taipei');
