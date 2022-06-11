@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+}
+
 
 ::-webkit-scrollbar{
     display: none;
@@ -16,7 +20,17 @@
 
 body{
     position: relative;
-    height: 100%;
+    margin: 0;
+}
+
+.container{
+    height: calc(100% - 72px);
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        height: calc(100% - 52px);
+    }
 }
 
 
@@ -184,6 +198,7 @@ h1.temp{
     font-weight: 800;
     font-size: 1em;
     opacity: 0.9;
+    height: 72px;
 }
 
 a{
@@ -194,13 +209,18 @@ a{
 .name{
     background-color:#8dbace;
     padding: 27px;
-    height: 72px;
 }
 
 
 @media only screen and (max-width: 768px) {
     .name{
        padding: 17px;
-       height: 52px;
+    }
+
+    .footer_part{
+        font-weight: 800;
+        font-size: 1em;
+        opacity: 0.9;
+        height: 52px;
     }
 }
